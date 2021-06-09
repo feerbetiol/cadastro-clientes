@@ -63,7 +63,7 @@
 
 button {
     color: #0B6FA4;
-    background-color: #98CAE6;
+    background-color: #FFFFFF;
     font-size: 15px;
     padding: 5px;
     margin-right: 5px;
@@ -77,12 +77,13 @@ button {
 table.paleBlueRows {
     border: 1px solid #FFFFFF;
     width: 100%; /*alterado manualmente*/
-    height: 100px; /*a m*/
+    height: 50px; /*a m*/
     text-align: center;
     border-collapse: collapse;
   }
   table.paleBlueRows td, table.paleBlueRows th {
     border: 1px solid #FFFFFF;
+    background-color: #98CAE6;
     padding: 3px 2px;
   }
   table.paleBlueRows tbody td {
@@ -101,6 +102,7 @@ table.paleBlueRows {
     color: #FFFFFF;
     text-align: center;
     border-left: 2px solid #FFFFFF;
+    background-color: #0B6FA4;
   }
   table.paleBlueRows thead th:first-child {
     border-left: none;

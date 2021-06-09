@@ -53,7 +53,7 @@ class Cliente {
                     <button id='editar' onClick='cliente.edita(${JSON.stringify(cliente)})'>✏️Editar</button>
                 </td>
             </tr>`
-        ))
+        )).join('')
         return (`
             <table border='1' class='paleBlueRows'>
                 <caption>Relação dos Clientes</caption>
@@ -95,6 +95,10 @@ document.getElementById('salvar').onclick = function () {
         utilizado: document.getElementById('utilizado').value,
         saldo: document.getElementById('saldo').value
     }
+    if(registro.nome ==='') {
+        alert('Obrigatório informar o nome do cliente')
+        return false
+    }
     cliente.salva(registro)
 }
 //tratamos a listagem
@@ -106,7 +110,7 @@ window.onload = function() {
 document.getElementById('utilizado').onchange = function () {
     let limite = document.getElementById('limite').value
     let utilizado = document.getElementById('utilizado').value
-    let saldo = (limite - utilizado)
+    let saldo = (Number(limite) + Number(utilizado))
     document.getElementById('saldo').value = saldo.toFixed(2)
     
 }
